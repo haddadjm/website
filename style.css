@@ -1,21 +1,128 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 
 body {
+    width: 100%;
+    box-sizing: border-box;
     padding: 0;
     margin: 0 auto;
-    width: 100%;
     font-family: 'Montserrat', sans-serif;
-    
+}
+
+* {
+    box-sizing: inherit;
 }
 
 ul {
     list-style: none;
 }
 
-.container {
-    background-image: url()
+img {
+    width: 100%;
 }
 
-.navigationbuttons {
+.backgroundcontainer {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    
+    
+}
+
+.homepage {
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    
+}
+
+.logo {
+    width: 25%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+nav ul {
+    position: fixed;
+    height: auto;
+    text-align: left;
+    top: 0;
+    right: 0;
+    padding-right: 3em;
+    padding-top: 1em;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18pt;
+    color: black;
+    padding: 1em 2em;
+}
+
+nav ul li a:hover {
+    color: whitesmoke;
+
+}
+
+.bottomelement {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: 800px;
+    width: 100%;
+    
+}
+
+h1 {
+    color:black;
+    position: relative;
+    margin: 0 auto;
     text-align: center;
+    font-size: 40pt;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.arrow-down{
+    width: 5rem;
+    position: relative;
+    margin: 0 auto;
+    -webkit-animation: 3s arrow infinite ease;
+    animation: 3s arrow infinite ease;
+}
+
+@-webkit-keyframes arrow {
+    0%, 100% {
+        top: 50px;
+    }
+    50% {
+        top: 80px;
+    }
+}
+@keyframes arrow {
+    0%, 100% {
+        top: 50px;
+    }
+    50% {
+        top: 80px;
+    }
+}
+
+.arrow-down:hover {
+    color: whitesmoke;
+}
+
+.arrow-down::after:hover {
+    color: whitesmoke;
+}
+
+.logotest {
+    margin: 0 auto;
+    width: 25%;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    
 }
