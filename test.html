@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            position: relative;
+            display: inline-block; /* Make the width of box same as image */
+        }
+        .box .text{
+            position: absolute;
+            z-index: 999;
+            margin: 0 auto;
+            left: 0;
+            right: 05
+                ;        
+            text-align: center;
+            top: 40%; /* Adjust this value to move the positioned div up and down */
+            background: rgba(0, 0, 0, 0.8);
+            font-family: Arial,sans-serif;
+            color: #fff;
+            width: 60%; /* Set the width of the positioned div */
+        }
+
+        .container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #f4f4f4;
+}
+
+li, a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.logosmall {
+    cursor: pointer;
+    width: 3%;
+}
+
+.nav-links {
+    list-style: none;
+}    
+
+nav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+nav li a {
+    font-size: 16pt;
+    transition: all 0.3s ease 0s;
+}
+
+nav li a:hover {
+    color: blue;
+
+</style>
+</head>
+
+<body>
+        <header>
+                <img class="logosmall" src="images/white logo.svg" alt="logosmall">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">resume</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+    
+    
+    
+    <div class="box">
+        <img src="images/homepage.png" alt="">
+        <div class="text">
+            <h1>This is text</h1>
+        </div>
+
+    </div>
+</body>
+</html>
