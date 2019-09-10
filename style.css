@@ -2,6 +2,9 @@
 
 
 /*Global*/
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -9,21 +12,38 @@ body {
     font-size: 16px;
     color: #f4f4f4;
     margin: 0 auto;
+    background-color: lightgray;
     line-height: 1.5;
 }
 
-section {
-    max-width: 80%;
-    padding: 0% 10%;
-    display: flex;
-    margin: 0 auto;
-    max-width: none;
-    height: 95vh;
-    background-color: #FE4B74;    
+img {
+    max-width: 100%;
 }
 
-section:nth-of-type(2n) {
-    background-color: #24252a;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    fill: currentColor;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -31,20 +51,15 @@ h1 {
     font-size: 60px;
 }
 
-p {
-    font-weight: 500;
-    font-size: 20px;
-}
-
 li {
     list-style: none;
 }
 
 nav {
-    background-color: #24252a;
+    background-color: black;
     position: fixed;
     width: 100%;
-    line-height: 45px;
+    max-height: 5vh;
     z-index: 99999;
 }
 
@@ -56,44 +71,45 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    padding: 16px 32px;
+    padding: 10px 20px;
 }
 
 nav li a {
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    font-size: 16pt;
+    font-size: 11pt;
     color: whitesmoke;
 }
 
 nav li a:hover {
-    color: rgb(0, 255, 255);
+    color: #3d81ff;
 }
 
 .logosmall {
     cursor: pointer;
-    height: 48px;
+    height: 28px;
     float: left;
-    margin: 16px 50px; 
+    margin: 8px 50px; 
     z-index: 99999999; 
     position: fixed;
     top: 0;
     left: 0;
-    
 }
 
-.box img {
-    width: 100%;
-    display: flex;
+.background-container {
+    max-width: 100%;
+    background-color: #FE4B74;
 }
 
 .box {
-    position: relative;
-    padding: 0;
-    margin: 0;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    width: 100%;
 }
 
-.box .text {
+
+/*.box .text {
     position: absolute;
     margin: 0 auto;
     z-index: 999;
@@ -106,80 +122,131 @@ nav li a:hover {
     background: rgba(0, 0, 0, 0.657);
     color: #fff;
     width: 60%;
-}
+}*/
 
-#about-me {
-    display: flex; 
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    transform: translate(0%, -50%);
-    align-items: center;
-}
-
-#aboutmetext {
-    margin-left: 10em;
-    
-}
-#headshotbox {
-    width: 80%;
-}
-
-#about-me img {
+.about-me-container {
     max-width: 100%;
-    max-height: 100%;
-    border: 10pt solid#24252a;;
-}
-
-#resume {
-    display: inline-block;
-    margin: 0 auto;
-}
-
-#contact-section {
-    display: flex;
-    height: 95vh;
-    background-color: aqua;
-    max-width: 100%;
-    justify-content: center;
-    color: #24252a;
-   
-}
-
-#header-text h1 {
-    text-align: center;
-    font-size: 60pt;
-    
-}
-
-#header-text h2 {
-    text-align: center;
-    font-size: 28pt;
-    margin: 0;
-   
-}
-
-#contactbox {
-    z-index: 99;
-    position: relative;
-    top: 50px;
-
-}
-
-#contactbox div {
-    float: left;
-    margin: 25px;
-    width: 400px;
-    height: 400px;
     background-color: #FE4B74;
 }
 
-#contactbox img {
-    max-height: 100%;
-    max-width: 100%;
+.about-me {
+    height: 95vh;
+    text-align: center;
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
-#contactbox figcaption {
-    font-size: 20pt;
+.about-me-image {
+    border: 10pt solid #24252a;
+    max-height: 80%;    
+    padding: 0;
+    margin: auto;
+}
+
+.about-me-text {
+    margin: auto;
+    text-align: left;
+    padding-left: 5rem;   
+}
+
+.resume-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 5%;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
+    color: #24252a;
+}
+
+.myname {
+    font-size: 50px;
+    line-height: 1;
     text-align: center;
+    
+}
+
+.mytitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: #3d81ff;
+    text-align: center;
+}
+
+.links {   
+    padding: 1em 0 1em 0;
+    text-align: center;
+}
+
+.link-item {
+    display: inline-block;
+    margin-right: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.link-item:hover {
+    color: #3d81ff;
+}
+
+.link-item img {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.section-title {
+   margin: 0 auto;
+   text-align: center;
+   padding: 1.5em 0 1.5em 0;
+}
+
+.job {
+    margin: 0;
+    padding: 0;
+}
+
+.job:last-child {
+    border-bottom: none;
+}
+
+.job-title-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
+
+.job-company {
+    text-align: left;
+    font-weight: bold;
+}
+
+.job-title {
+    color: #3d81ff;
+}
+
+.job-location {
+    font-weight: bold;
+    text-align: right;
+}
+
+.job-bullets {
+    text-align: left;
+    margin: 0;
+    padding: 0 1em 0 1em;
+}
+
+.job-bullets ul {
+    padding-left: none;
+}
+
+.job-bullets li {
+    padding-left: 32px;
+    background-image: url(images/fingerpointer.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: top 6px left 5px;
+}
+
+.bullet-item {
+    margin: 0;
+    padding-top: .5em;
 }
