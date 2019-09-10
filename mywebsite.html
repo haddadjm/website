@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jordan's Webstie</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&display=swap');
+    </style>
 </head>
 
-<style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
-</style>
 <body>
     <header>
             <img class="logosmall" src="images/white logo.svg">
@@ -30,21 +30,21 @@
             </nav>
     </header>
     <div class="background-container">
-        <div class="box">
-            <img class="background" src="images/landing page 2.png" alt="background">
+        <div class="background">
+          <h1>
+                PROJECT MANAGER. LEADER. INNOVATOR. CONSULTANT. COLLABORATOR. ANALYST. PRODUCT MANAGER. PROCESS IMPROVER. WEB DEVELOPER. UI DESIGNER. CONTENT CREATOR. CRITICAL THINKER.
+          </h1>
         </div> 
     </div>
     <div class="about-me-container">
-        <div class="about-me">
-            <img class="about-me-image" src="images/thebestphotoever.jpg" alt="myphoto"> 
-            <div class="about-me-text">
-                <h1>
-                    Hello! I'm Jordan.
-                </h1>
-                 <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
+        <img class="about-me-image" src="images/thebestphotoever.jpg" alt="myphoto"> 
+        <div class="about-me-text">
+            <h1>
+                Hello! I'm Jordan.
+            </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
     </div>
 
@@ -194,19 +194,15 @@
             var menu = document.getElementById('menu');
             var nav = document.getElementById('nav');
             var exit = document.getElementById('exit');
-
             menu.addEventListener('click', function(e) {
                 nav.classList.toggle('hide-mobile');
                 e.preventDefault();
             });
-
             exit.addEventListener('click', function(e) {
                 nav.classList.add('hide-mobile');
                 e.preventDefault();
             });
-
         </script>
 
 </body>
 </html>
-

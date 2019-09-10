@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&display=swap');
 
 
 /*Global*/
@@ -9,7 +9,7 @@
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1em;
     color: #f4f4f4;
     margin: 0 auto;
     background-color: lightgray;
@@ -17,7 +17,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+   max-width: 100%;
 }
 
 a {
@@ -48,7 +48,7 @@ section {
 
 h1 {
     font-weight: 500;
-    font-size: 60px;
+    font-size: 3.75em;
 }
 
 li {
@@ -56,12 +56,13 @@ li {
 }
 
 header {
-    
+    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: black;
     padding: .8em 1.2em;
+    z-index: 99;
 }
 
 nav {
@@ -77,11 +78,11 @@ nav ul {
     height: 100%;
     z-index: 99999;
     background-color: black;
-    padding-top: .2em;
+    padding-top: .8em;
 }
 
 nav ul li {
-    padding: 0px 20px;
+    padding: 0 1.875em;
 }
 
 nav ul li a {
@@ -99,7 +100,7 @@ nav li a:hover {
 }
 
 .menu {
-    width: 25px;
+    width: 1.6em;
     margin-top: 40%;
 }
 
@@ -118,50 +119,73 @@ nav li a:hover {
 }
 
 .logosmall {
-    height: 28px;
+    height: 1.75em;
 }
 
 .background-container {
-    max-width: 100%;
-    background-color: #FE4B74;
+    position: relative;
+    display: flex;
+    min-height: 95vh;
+    margin: 0 auto;
+    top: 5vh;
+    padding: 0;
+    text-align: center;
+    background-color: black;
 }
 
-.box {
-    height: 100vh;
-    text-align: center;
-    display: flex;
+.background {
+    position: absolute;
+    height: 100%;
     width: 100%;
 }
 
-.about-me-container {
-    max-width: 100%;
-    background-color: #FE4B74;
+.background h1 {
+    margin: 0 auto;
+    line-height: 1.1;
+    font-size: 5.75vw;
+    font-weight: 900;
+    background-image: url("images/woodcolor.jpg");
+    background-position: center center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.about-me {
+.about-me-container {
+    position: relative;
+    top: 5vh;
+    background-color: #FE4B74;
     height: 95vh;
-    text-align: center;
+    max-width: 100vw;
     display: flex;
-    max-width: 80%;
-    margin: 0 auto;
+    padding: 0 10% 0 10%;
+    justify-content: space-between;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .about-me-image {
-    border: 10pt solid #24252a;
-    max-height: 80%;    
+    min-width: 40%;
+    max-width: 40%;
+    border: 10pt solid #24252a;    
     padding: 0;
     margin: auto;
+    
 }
 
 .about-me-text {
+    font-size: 2vh;
+    max-width: 100%;
     margin: auto;
     text-align: left;
     padding-left: 5rem;   
 }
 
 .resume-container {
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 70%;
+    position: relative;
+    top: 5vh;
+    margin: 5% auto;
     padding: 5%;
     background-color: whitesmoke;
     box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
@@ -169,14 +193,14 @@ nav li a:hover {
 }
 
 .myname {
-    font-size: 50px;
+    font-size: 3em;
     line-height: 1;
     text-align: center;
     
 }
 
 .mytitle {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 400;
     color: #3d81ff;
     text-align: center;
@@ -189,7 +213,7 @@ nav li a:hover {
 
 .link-item {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 1.5em;
     transition: all 0.3s ease 0s;
 }
 
@@ -199,7 +223,7 @@ nav li a:hover {
 
 .link-item img {
     display: inline-block;
-    margin-right: 8px;
+    margin-right: .1em;
 }
 
 .section-title {
@@ -248,11 +272,11 @@ nav li a:hover {
 }
 
 .job-bullets li {
-    padding-left: 32px;
+    padding-left: 2em;
     background-image: url(images/fingerpointer.svg);
     background-repeat: no-repeat;
-    background-size: 18px 18px;
-    background-position: top 6px left 5px;
+    background-size: 1.2em 1.2em;
+    background-position: top .2em left .3em;
 }
 
 .bullet-item {
@@ -302,4 +326,3 @@ nav li a:hover {
     }
 
 }
-
