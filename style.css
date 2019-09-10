@@ -55,26 +55,39 @@ li {
     list-style: none;
 }
 
-nav {
-    background-color: black;
-    position: fixed;
+header {
+    
     width: 100%;
-    max-height: 5vh;
-    z-index: 99999;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: .8em 1.2em;
+}
+
+nav {
+    background-color: black;  
 }
 
 nav ul {
-    float: right;
-    margin: 0;
-    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    text-align: left;
+    height: 100%;
+    z-index: 99999;
+    background-color: black;
+    padding-top: .2em;
 }
 
 nav ul li {
-    display: inline-block;
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 
-nav li a {
+nav ul li a {
+    display: block;
+    padding: 1em 2em;
+    width: 100%;
     transition: all 0.3s ease 0s;
     text-decoration: none;
     font-size: 11pt;
@@ -85,15 +98,27 @@ nav li a:hover {
     color: #3d81ff;
 }
 
-.logosmall {
+.menu {
+    width: 25px;
+    margin-top: 40%;
+}
+
+.exit {
+    width: 2em;
+    padding-top: .5em;
+}
+
+.exit-btn {
+    text-align: right;
     cursor: pointer;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+.logosmall {
     height: 28px;
-    float: left;
-    margin: 8px 50px; 
-    z-index: 99999999; 
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
 .background-container {
@@ -107,22 +132,6 @@ nav li a:hover {
     display: flex;
     width: 100%;
 }
-
-
-/*.box .text {
-    position: absolute;
-    margin: 0 auto;
-    z-index: 999;
-    text-transform: uppercase;
-    font-size: 48px;
-    text-align: center;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.657);
-    color: #fff;
-    width: 60%;
-}*/
 
 .about-me-container {
     max-width: 100%;
@@ -250,3 +259,47 @@ nav li a:hover {
     margin: 0;
     padding-top: .5em;
 }
+
+@media only screen and (min-width: 200px) {
+    nav ul {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    nav ul {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .show-desktop {
+        display: block;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    nav ul {
+        position: inherit;
+        height: auto;
+        width: auto;
+        background: none;
+        display: flex;
+        padding-top: 0;
+    }
+
+    nav li {
+        float: left; 
+        
+    }
+
+    nav ul li a {
+        background: inherit;
+        text-align: right;
+        padding: 0;
+    }
+
+}
+
