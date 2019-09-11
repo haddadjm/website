@@ -148,30 +148,29 @@ nav li a:hover {
     transform: translate(-50%, -50%);
 }
 
-.background-container {
-    scroll-snap-type: y mandatory;     
+.background-container { 
     position: relative;
-    display: flex;
     min-height: 100vh;
-    margin: 0 auto;
-    top: 5vh;
     padding: 0;
-    text-align: center;
+    margin: 0 auto;
     background-color: black;
+    text-align: center;
 }
 
 .background {
     position: absolute;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
 }
 
 .background h1 {
-    margin: 0 auto;
+    margin: 0;
     line-height: 1.1;
     font-size: 5.75vw;
     font-weight: 900;
-    background-image: url("images/woodcolor.jpg");
+    background-image: url("images/woodcolorlarge.jpg");
     background-position: center center;
     background-clip: text;
     -webkit-background-clip: text;
@@ -273,7 +272,11 @@ nav li a:hover {
 .aboutmeheader {
     color: #3d81ff;
     font-size: 1.5em;
-    padding: 0.3em 0 0.3em 0;
+    padding: 0;
+}
+
+.aboutmecontent {
+    padding-bottom: 0.5em;
 }
 
 .resume-container {
@@ -309,8 +312,18 @@ nav li a:hover {
 }
 
 .links {   
-    padding: 1em 0 1em 0;
+    padding: 1em 0 0 0;
     text-align: center;
+}
+
+#profile {
+    margin: 0;
+    padding: 1.5em 0 1em 0;
+}
+
+#experience {
+    margin: 0;
+    padding: 1em 0 1.5em 0;
 }
 
 .mobile-links {
@@ -337,7 +350,7 @@ nav li a:hover {
 .section-title {
    margin: 0 auto;
    text-align: center;
-   padding: 1.5em 0 1.5em 0;
+   padding: 1em 0 1em 0;
 }
 
 .section-img {
@@ -347,10 +360,6 @@ nav li a:hover {
 .job {
     margin: 0;
     padding: 0;
-}
-
-.job:last-child {
-    border-bottom: none;
 }
 
 .job-title-container {
@@ -389,6 +398,7 @@ nav li a:hover {
 
 .job-bullets li {
     padding-left: 2em;
+    padding-bottom: 0.2em;
     background-image: url(images/fingerpointer.svg);
     background-repeat: no-repeat;
     background-size: 1.2em 1.2em;
@@ -397,7 +407,7 @@ nav li a:hover {
 
 .bullet-item {
     margin: 0;
-    padding-top: .5em;
+    padding: 0;
 }
 
 @media only screen and (min-width: 375px) {
@@ -592,4 +602,14 @@ nav li a:hover {
         text-align: center;
         padding: 1em;
         color: #3d81ff;
+}
+
+@media only screen and (min-width: 2000px) {
+    .aboutmecontent {
+        padding-bottom: 3em;
+    }
+
+    .resume {
+        width: 60%;
+    }
 }
