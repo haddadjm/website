@@ -267,6 +267,7 @@ nav li a:hover {
 
 .about-me-text-mobile {
     padding: 0 1em 0.5em 1.2em;
+    
 }
 
 .aboutmeheader {
@@ -314,6 +315,8 @@ nav li a:hover {
 
 .mobile-links {
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
 .link-item {
