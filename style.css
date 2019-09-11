@@ -472,7 +472,7 @@ nav li a:hover {
     }
 
     .about-me-image {
-    display: inline-block;
+        display: inline-block;
     }
 
     .about-me-text {
@@ -585,8 +585,8 @@ nav li a:hover {
     }
 }
 
-.copyright {
-    text-align: center;
-    padding: 1em;
-    color: #3d81ff;
+    .copyright {
+        text-align: center;
+        padding: 1em;
+        color: #3d81ff;
 }
