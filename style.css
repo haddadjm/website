@@ -14,10 +14,19 @@ body {
     margin: 0 auto;
     background-color: lightgray;
     line-height: 1.5;
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
 }
 
-img {
-   max-width: 100%;
+.snappoint {
+    position: relative;
+    top: -5vh;
+    scroll-snap-align: start;
+}
+.anchor {
+    position: relative;
+    top: -5vh;
+    visibility: hidden;
 }
 
 a {
@@ -26,6 +35,7 @@ a {
 }
 p {
     margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -66,7 +76,8 @@ header {
 }
 
 nav {
-    background-color: black;  
+    background-color: black;
+    padding-top: .2em;
 }
 
 nav ul {
@@ -100,8 +111,8 @@ nav li a:hover {
 }
 
 .menu {
-    width: 1.6em;
-    margin-top: 40%;
+    width: 2em;
+    margin-top: 20%;
 }
 
 .exit {
@@ -119,13 +130,30 @@ nav li a:hover {
 }
 
 .logosmall {
-    height: 1.75em;
+    height: 2em;
+}
+
+.background-container-mobile {
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    background-color: black;    
+}
+
+.mobile-background {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .background-container {
+    scroll-snap-type: y mandatory;     
     position: relative;
     display: flex;
-    min-height: 95vh;
+    min-height: 100vh;
     margin: 0 auto;
     top: 5vh;
     padding: 0;
@@ -151,41 +179,97 @@ nav li a:hover {
     color: transparent;
 }
 
-.about-me-container {
+.hero-container {
     position: relative;
-    top: 5vh;
-    background-color: #FE4B74;
-    height: 95vh;
-    max-width: 100vw;
-    display: flex;
-    padding: 0 10% 0 10%;
-    justify-content: space-between;
-    vertical-align: middle;
     text-align: center;
+    background-color: #3d81ff;
+    min-height: 95vh;
+    padding-top: 1%;
+    width: 100%;
 }
 
-.about-me-image {
-    min-width: 40%;
-    max-width: 40%;
-    border: 10pt solid #24252a;    
-    padding: 0;
-    margin: auto;
+.hero {
+    position: absolute;
+    width: 50%;
+    padding: 2%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
+    color: #24252a;
     
 }
 
+.hero h1 {
+    padding-top: 0.2em;
+    margin: 0;
+    padding-bottom: 0.5em;
+    line-height: 1;
+}
+
+.hero p {
+    font-size: 1.2em;
+    padding-bottom: 1em;
+    margin: 0;
+}
+
+.about-me-container {
+    position: relative;
+    background-color: lightgray;
+    height: 95vh;
+    width: 100%;
+    text-align: center;
+}
+
+.aboutme {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;   
+    padding: 2%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
+    color: #24252a;
+    
+}
+
+.about-me-image {
+    border: 10pt solid #24252a;    
+    max-width: 30%;
+    height: auto; 
+    display: inline-block; 
+    vertical-align: middle;
+}
+
 .about-me-text {
-    font-size: 2vh;
-    max-width: 100%;
-    margin: auto;
+    padding-left: 5em;
+    display: inline-block;
+    max-width: 60%;
     text-align: left;
-    padding-left: 5rem;   
+    vertical-align: middle;
+}
+
+.aboutmeheader {
+    color: #3d81ff;
+    font-size: 1.5em;
+    padding: 0.3em 0 0.3em 0;
 }
 
 .resume-container {
-    max-width: 70%;
-    position: relative;
     top: 5vh;
-    margin: 5% auto;
+    background-color: lightgray;
+    padding-top: 4em;
+    padding-bottom: 1em;
+    max-width: 100%;
+    scroll-snap-type: none;
+}
+
+.resume { 
+    max-width: 70%;
+    margin: 0 auto;
     padding: 5%;
     background-color: whitesmoke;
     box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
@@ -196,7 +280,6 @@ nav li a:hover {
     font-size: 3em;
     line-height: 1;
     text-align: center;
-    
 }
 
 .mytitle {
@@ -232,6 +315,10 @@ nav li a:hover {
    padding: 1.5em 0 1.5em 0;
 }
 
+.section-img {
+    max-width: 100%;
+}
+
 .job {
     margin: 0;
     padding: 0;
@@ -261,6 +348,10 @@ nav li a:hover {
     text-align: right;
 }
 
+.job-length {
+    text-align: right;
+}
+
 .job-bullets {
     text-align: left;
     margin: 0;
@@ -284,25 +375,51 @@ nav li a:hover {
     padding-top: .5em;
 }
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 375px) {
     nav ul {
-        width: 30%;
+        width: 35%;
+    }
+
+    .logosmall {
+        margin-top: .5%;
+    }
+
+    .resume-container {
+        display: none;
+    }
+
+    .background-container {
+        display: none;
+    }
+
+    .about-me-container {
+        display: none;
+    }
+
+    .hero {
+        width: 95%;
     }
 }
 
 @media only screen and (min-width: 650px) {
-    nav ul {
-        width: 40%;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
     .show-desktop {
+        display: block;
+    }
+
+    .about-me-container {
         display: block;
     }
 
     .hide-desktop {
         display: none;
+    }
+
+    .background-container-mobile {
+        display: none;
+    }
+
+    .background-container {
+        display: block;
     }
 
     nav ul {
@@ -311,7 +428,7 @@ nav li a:hover {
         width: auto;
         background: none;
         display: flex;
-        padding-top: 0;
+        padding-top: 1%;
     }
 
     nav li {
@@ -325,4 +442,68 @@ nav li a:hover {
         padding: 0;
     }
 
+    .logosmall{
+        margin-top: 0.1%;
+    }
+
+    .hero {
+        width: 50%;
+
+    }
+    .resume-container {
+        display: inherit;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .show-desktop {
+        display: block;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .background-container-mobile {
+        display: none;
+    }
+
+    .background-container {
+        display: inherit;
+    }
+
+    nav ul {
+        position: inherit;
+        height: auto;
+        width: auto;
+        background: none;
+        display: flex;
+        padding-top: 1%;
+    }
+
+    nav li {
+        float: left; 
+        
+    }
+
+    nav ul li a {
+        background: inherit;
+        text-align: right;
+        padding: 0;
+    }
+
+    .logosmall{
+        margin-top: 0.1%;
+    }
+
+    .resume-container {
+        display: inherit;
+    }
+}
+
+.copyright {
+    text-align: center;
+    padding: 1em;
+    color: #3d81ff;
 }
