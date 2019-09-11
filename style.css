@@ -233,7 +233,21 @@ nav li a:hover {
     background-color: whitesmoke;
     box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
     color: #24252a;
-    
+}
+
+.aboutme-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; 
+    max-height: 80vh;
+    padding: 2%;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
+    color: #24252a;
+    text-align: left;
 }
 
 .about-me-image {
@@ -250,6 +264,12 @@ nav li a:hover {
     max-width: 60%;
     text-align: left;
     vertical-align: middle;
+}
+
+.about-me-text-mobile {
+    padding: 0 1em 0.5em; 1em;
+   
+
 }
 
 .aboutmeheader {
@@ -384,6 +404,10 @@ nav li a:hover {
         margin-top: .5%;
     }
 
+    .about-me-desktop{
+        display: none;
+    }
+    
     .resume-container {
         display: none;
     }
@@ -392,8 +416,16 @@ nav li a:hover {
         display: none;
     }
 
-    .about-me-container {
+    .about-me-desktop {
         display: none;
+    }
+
+    .about-me-image {
+        display: none;
+    }    
+
+    .aboutmeheader {
+        text-align: center;
     }
 
     .hero {
@@ -406,8 +438,24 @@ nav li a:hover {
         display: block;
     }
 
-    .about-me-container {
+    .about-me-mobile {
+        display: none;
+    }
+
+    .about-me-desktop {
         display: block;
+    }
+
+    .about-me-image {
+    display: inline-block;
+    }
+
+    .about-me-text {
+        display: inline-block;
+    }
+
+    .aboutmeheader {
+        text-align: left;
     }
 
     .hide-desktop {
