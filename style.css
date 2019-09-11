@@ -16,9 +16,6 @@ body {
     line-height: 1.5;
  
 }
-#snappoint {
-    scroll-snap-align: start;
-}
 
 .snappoint {
     position: relative;
@@ -454,7 +451,7 @@ nav li a:hover {
 
 @media only screen and (min-width: 650px) {
     body {
-        scroll-snap-type: proximity;
+        scroll-snap-type: none;
         overflow-y: scroll;
         }
 
