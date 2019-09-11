@@ -14,8 +14,10 @@ body {
     margin: 0 auto;
     background-color: lightgray;
     line-height: 1.5;
-    scroll-snap-type: y proximity;
-    overflow-y: scroll;
+ 
+}
+#snappoint {
+    scroll-snap-align: start;
 }
 
 .snappoint {
@@ -267,9 +269,7 @@ nav li a:hover {
 }
 
 .about-me-text-mobile {
-    padding: 0 1em 0.5em; 1em;
-   
-
+    padding: 0 1em 0.5em 1.2em;
 }
 
 .aboutmeheader {
@@ -288,12 +288,13 @@ nav li a:hover {
 }
 
 .resume { 
-    max-width: 70%;
+    max-width: 65%;
     margin: 0 auto;
     padding: 5%;
     background-color: whitesmoke;
     box-shadow: 2px 2px 4px 1px  rgba(0, 0, 0, 0.5);
     color: #24252a;
+    scroll-snap-type: none;
 }
 
 .myname {
@@ -312,6 +313,10 @@ nav li a:hover {
 .links {   
     padding: 1em 0 1em 0;
     text-align: center;
+}
+
+.mobile-links {
+    font-size: 1em;
 }
 
 .link-item {
@@ -396,8 +401,18 @@ nav li a:hover {
 }
 
 @media only screen and (min-width: 375px) {
+
+    body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    }
+
     nav ul {
         width: 35%;
+    }
+
+    h1 {
+        font-size: 3em;
     }
 
     .logosmall {
@@ -431,9 +446,22 @@ nav li a:hover {
     .hero {
         width: 95%;
     }
+
+    .resume-hero {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 650px) {
+    body {
+        scroll-snap-type: proximity;
+        overflow-y: scroll;
+        }
+
+    h1 {
+        font-size: 4em;
+    }
+
     .show-desktop {
         display: block;
     }
@@ -499,7 +527,17 @@ nav li a:hover {
 
     }
     .resume-container {
-        display: inherit;
+        display: block;
+    
+        
+    }
+    
+    .resume-hero {
+        display: block;
+    }
+
+    .contact-hero {
+        display: none;
     }
 }
 
@@ -546,7 +584,7 @@ nav li a:hover {
     }
 
     .resume-container {
-        display: inherit;
+        display: block;
     }
 }
 
