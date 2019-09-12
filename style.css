@@ -476,6 +476,7 @@ input[type=submit] {
 
 #captcha {
     text-align: center;
+    margin: 0 auto;
 }
 
 @media only screen and (min-width: 375px) {
@@ -622,10 +623,7 @@ input[type=submit] {
         display: none;
     }
 
-    body {
-        padding-bottom: 4em;
-    }
-}
+ }
 
 
 @media only screen and (min-width: 1024px) {
