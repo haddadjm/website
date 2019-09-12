@@ -468,8 +468,7 @@ input[type=submit] {
   }
 
   footer {
-    position: relative;
-    bottom: 0;
+    padding: 2em;
     text-align: center;
     color: #3d81ff;
 }
@@ -477,6 +476,8 @@ input[type=submit] {
 #captcha {
     text-align: center;
     margin: 0 auto;
+    padding: 0.5em;
+    width: 100%;
 }
 
 @media only screen and (min-width: 375px) {
