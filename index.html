@@ -122,14 +122,14 @@
     
     <div class="snappoint"></div>
     <div class="anchor" id="resume"></div>
-    <div class="contact-hero">
+    <div class="links-hero">
     <div class="hero-container">
         <div class="hero">
             <h1>
                 If you'd like to learn more..
             </h1>
             <p>
-                Below is a link to my resume, as well as various ways you can contact me
+                Below are links to my Resume, LinkedIn, and GitHub, as well as my email address and phone number.
             </p>
         </div>
     </div>
@@ -326,9 +326,46 @@
     </div> <!--end resume container-->
     </section>
     
+    <div class="contact-hero" id="lets-chat">
+        <div class="hero-container">
+            <div class="hero">
+                <h1>
+                    Lets chat...
+                </h1>
+                <p>
+                    Shoot me a message using the form below! 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="resume-container" id="contactformcontainer">
+        <div class="resume" id="contactform">
+            <div class="myname" id="contactformheader">Let's Connect.</div>
+            <div class="mytitle" id="contactformmessage">If you have a question for me or would like to learn more about how my skills could benefit your company, please drop me a message below!</div>
+
+            <form method="POST" action="send_form_email.php">
+                <div class="input-labels">Full Name</div>
+                <input type="text" id="name" name="name" placeholder="">
+
+                <div class="input-labels">Email Address</div>
+                <input type="text" id="email" name="email" placeholder="">
+
+                <div class="input-labels">Subject</div>
+                <input type="text" id="subject" name="subject" placeholder="">
+
+                <div class="input-labels">Your Message</div>
+                <textarea id="message" name="message" placeholder="" style="height:20vh"></textarea>
+
+                <input type="submit" value="Send Message">
+         </form>
+    </div>
+    </div>
+
     <div class="copyright">
         &copy 2019 Jordan Haddad
     </div>
+
+    
 
         <script>
             var menu = document.getElementById('menu');

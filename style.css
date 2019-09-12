@@ -159,7 +159,7 @@ nav li a:hover {
 
 .background {
     position: absolute;
-    top: 51%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -283,7 +283,7 @@ nav li a:hover {
     top: 5vh;
     background-color: lightgray;
     padding-top: 4em;
-    padding-bottom: 1em;
+    padding-bottom: 4em;
     max-width: 100%;
     scroll-snap-type: none;
 }
@@ -410,6 +410,62 @@ nav li a:hover {
     padding: 0;
 }
 
+#contactformcontainer {
+    height: 95vh;
+}
+
+#contactform {
+    padding: 2em;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+#contactformheader {
+    padding-bottom: 0.5em;
+}
+
+#contactformmessage {
+    padding-bottom: 1.5em;
+    font-size: 1.2em;
+}
+
+.input-labels {
+    text-align: left;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    font-size: 1em;
+    color: #24252a;
+    padding: 0.5em;
+    border: 1px solid #3d81ff; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+    resize: vertical; 
+    margin-bottom: 1.2em;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #3d81ff;
+    color: whitesmoke;
+    padding: 0.5em;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
 @media only screen and (min-width: 375px) {
 
     body {
@@ -458,6 +514,10 @@ nav li a:hover {
     }
 
     .resume-hero {
+        display: none;
+    }
+
+    #lets-chat {
         display: none;
     }
 }
@@ -546,7 +606,7 @@ nav li a:hover {
         display: block;
     }
 
-    .contact-hero {
+    .links-hero {
         display: none;
     }
 }
