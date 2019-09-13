@@ -506,63 +506,6 @@ input[type=submit] {
     display: inline-block;
 }
 
-@media screen and (orientation: landscape) {
-    body {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll; 
-    }
-
-    nav ul {
-        width: 35%;
-        z-index: 99999;
-    }
-
-    h1 {
-        font-size: 3em;
-    }
-
-    .logosmall {
-        margin-top: .5%;
-    }
-
-    .about-me-desktop{
-        display: none;
-    }
-    
-    .resume-container {
-        display: none;
-    }
-
-    .background-container {
-        display: none;
-    }
-
-    .about-me-desktop {
-        display: none;
-    }
-
-    .about-me-image {
-        display: none;
-    }    
-
-    .aboutmeheader {
-        text-align: center;
-    }
-
-    .hero {
-        width: 95%;
-    }
-
-    .resume-hero {
-        display: none;
-    }
-
-    #lets-chat {
-        display: none;
-    }
-}
-}
-
 @media only screen and (min-width: 375px) {
 
     body {
