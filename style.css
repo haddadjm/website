@@ -15,7 +15,6 @@ body {
     background-color: lightgray;
     line-height: 1.5;
     padding-bottom: 2em;
- 
 }
 
 .snappoint {
@@ -151,32 +150,44 @@ nav li a:hover {
 
 .background-container { 
     position: relative;
-    min-height: 100vh;
-    padding: 0;
     margin: 0 auto;
-    background-color: black;
-    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black; 
 }
 
-.background {
-    position: absolute;
-    top: 52%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: left;
     width: 100%;
+    height: 100%;
+    padding: 0 3rem;
 }
 
-.background h1 {
+.background-container h1 {
+    margin: 0;
+    
+}
+
+.background-container span {
     margin: 0;
     line-height: 1.1;
-    font-size: 5.75vw;
+    font-size: 1em;
     font-weight: 900;
     background-image: url("images/color2.jpg");
     background-position: center center;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    
 }
+
+.txt-type {
+    border-right: solid white;
+}
+  
+ 
 
 .hero-container {
     position: relative;
@@ -495,6 +506,63 @@ input[type=submit] {
     display: inline-block;
 }
 
+@media screen and (orientation: landscape) {
+    body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll; 
+    }
+
+    nav ul {
+        width: 35%;
+        z-index: 99999;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .logosmall {
+        margin-top: .5%;
+    }
+
+    .about-me-desktop{
+        display: none;
+    }
+    
+    .resume-container {
+        display: none;
+    }
+
+    .background-container {
+        display: none;
+    }
+
+    .about-me-desktop {
+        display: none;
+    }
+
+    .about-me-image {
+        display: none;
+    }    
+
+    .aboutmeheader {
+        text-align: center;
+    }
+
+    .hero {
+        width: 95%;
+    }
+
+    .resume-hero {
+        display: none;
+    }
+
+    #lets-chat {
+        display: none;
+    }
+}
+}
+
 @media only screen and (min-width: 375px) {
 
     body {
@@ -504,6 +572,8 @@ input[type=submit] {
 
     nav ul {
         width: 35%;
+        z-index: 99999;
+
     }
 
     h1 {
@@ -702,3 +772,4 @@ input[type=submit] {
         width: 60%;
     }
 }
+

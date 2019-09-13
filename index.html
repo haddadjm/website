@@ -26,11 +26,11 @@
                     <li><a href="#">home</a></li>
                     <li><a href="#about">about</a></li>
                     <li><a href="#resume">resume</a></li>
-                    <li><a href="#contactanchor">contact</a></li>
+                    <li><a href="#">contact</a></li>
                 </ul>
             </nav>
     </header>
-    
+    <div class="anchor" id="home"></div>
     <div class="snappoint"></div>
     <div class="background-container-mobile">
         <div class="mobile-background">
@@ -38,11 +38,11 @@
         </div>
     </div>
     <div class="background-container">
-        <div class="background">
-          <h1>
-                PROJECT MANAGER. LEADER. INNOVATOR. CONSULTANT. COLLABORATOR. ANALYST. PRODUCT MANAGER. PROCESS IMPROVER. WEB DEVELOPER. UI DESIGNER. CONTENT CREATOR. CRITICAL THINKER.
+          <div class="content">
+            <h1> Jordan Haddad the
+            <span class="txt-type" data-wait="3000" data-words='["Analyst..", "Problem Solver..", "Consultant..","Creator.."]'></span>
           </h1>
-        </div> 
+        </div>
     </div>
 
     <div class="anchor" id="about"></div>
@@ -372,20 +372,7 @@
 
     
 
-        <script>
-            var menu = document.getElementById('menu');
-            var nav = document.getElementById('nav');
-            var exit = document.getElementById('exit');
-            menu.addEventListener('click', function(e) {
-                nav.classList.toggle('hide-mobile');
-                e.preventDefault();
-            });
-            exit.addEventListener('click', function(e) {
-                nav.classList.add('hide-mobile');
-                e.preventDefault();
-            });
-            
-        </script>
+        <script src="main.js"></script>
 
 
 
